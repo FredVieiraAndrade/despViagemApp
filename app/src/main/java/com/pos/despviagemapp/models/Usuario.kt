@@ -2,7 +2,6 @@ package com.pos.despviagemapp.models
 
 import com.squareup.moshi.Json
 
-
 data class Usuario(
     @Json(name="id")
     val id: Int?,

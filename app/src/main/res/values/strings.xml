@@ -2,4 +2,36 @@
     <string name="app_name">despViagemApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="motivo_viagem">
+        <item>Reunião</item>
+        <item>Suporte</item>
+        <item>Demonstração</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="tipo_despesa">
+        <item>Alimentação</item>
+        <item>Hospedagem</item>
+        <item>Taxi</item>
+        <item>Ônibus</item>
+        <item>Avião</item>
+        <item>Combustível</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="centro_custo">
+        <item>1010 - Financeira</item>
+        <item>1020 - Arrecadação</item>
+        <item>1030 - Suprimentos</item>
+        <item>1040 - Pessoal</item>
+        <item>1050 - Educação</item>
+        <item>1060 - Saude</item>
+        <item>2010 - Serviços BHZ</item>
+        <item>2020 - Comercial BHZ</item>
+        <item>3010 - Serviços QVH</item>
+        <item>3020 - Comercial QVH</item>
+    </string-array>
+
 </resources>
+

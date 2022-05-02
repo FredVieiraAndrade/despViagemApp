@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lblTituloApuracao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Apuração"
+            android:textColor="@color/Fields"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblApurProtocolo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Protocolo:"
+            android:textColor="@color/Fields"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTituloApuracao" />
+
+        <TextView
+            android:id="@+id/txtApurProtocoloID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="ID"
+            android:textColor="@color/Labels"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lblApurProtocolo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblApurProtocolo"
+            app:layout_constraintTop_toTopOf="@+id/lblApurProtocolo" />
+
+        <TextView
+            android:id="@+id/lblApurTotalDespesa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Total de Despesas Lançadas:"
+            android:textColor="@color/Labels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApurProtocoloID" />
+
+        <TextView
+            android:id="@+id/lblApurTotalAdiantamentos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Total de Adiantamentos:"
+            android:textColor="@color/Labels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApurTotalDespesas" />
+
+        <TextView
+            android:id="@+id/lblApurTotalDevolverReceber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Total a Devolver/Receber"
+            android:textColor="@color/Labels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApurTotalAdiantamento" />
+
+        <TextView
+            android:id="@+id/lblApurCentroCusto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Centro de Custo Despesa:"
+            android:textColor="@color/Labels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApurTotalDevolverReceber" />
+
+        <TextView
+            android:id="@+id/lblApurDadosBancarios"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Dados Bancários:"
+            android:textColor="@color/Labels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cboApurCentroCusto" />
+
+        <EditText
+            android:id="@+id/txtApurTotalDespesas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="R$ 0,00"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:numeric="decimal"
+            android:textColor="@color/Fields"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurTotalDespesa" />
+
+        <EditText
+            android:id="@+id/txtApurTotalAdiantamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="R$ 0,00"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:numeric="decimal"
+            android:textColor="@color/Fields"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurTotalAdiantamentos" />
+
+        <EditText
+            android:id="@+id/txtApurTotalDevolverReceber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="R$ 0,00"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:numeric="decimal"
+            android:textColor="@color/Fields"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurTotalDevolverReceber" />
+
+        <Spinner
+            android:id="@+id/cboApurCentroCusto"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurCentroCusto"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/lblApurAgencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:text="Agência:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Fields"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurBanco" />
+
+        <TextView
+            android:id="@+id/lblApurBanco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:text="Banco:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Fields"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurDadosBancarios" />
+
+        <TextView
+            android:id="@+id/lblApurConta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:text="Conta:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Fields"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurAgencia" />
+
+        <TextView
+            android:id="@+id/txtApurAgencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="0000"
+            android:textAlignment="textStart"
+            android:textColor="@color/Fields"
+            app:layout_constraintBottom_toBottomOf="@+id/lblApurAgencia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toTopOf="@+id/lblApurAgencia" />
+
+        <TextView
+            android:id="@+id/txtApurBanco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="0000"
+            android:textAlignment="textStart"
+            android:textColor="@color/Fields"
+            app:layout_constraintBottom_toBottomOf="@+id/lblApurBanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toTopOf="@+id/lblApurBanco" />
+
+        <TextView
+            android:id="@+id/txtApurConta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="0000"
+            android:textAlignment="textStart"
+            android:textColor="@color/Fields"
+            app:layout_constraintBottom_toBottomOf="@+id/lblApurConta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toTopOf="@+id/lblApurConta" />
+
+        <Button
+            android:id="@+id/btnApurEnviar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:text="enviar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblApurConta" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

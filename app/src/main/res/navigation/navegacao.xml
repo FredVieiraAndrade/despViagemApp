@@ -9,10 +9,59 @@
         android:id="@+id/loginFragment"
         android:name="com.pos.despviagemapp.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login"/>
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_listaViagensFragment"
+            app:destination="@id/listaViagensFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/listaViagensFragment"
         android:name="com.pos.despviagemapp.ListaViagensFragment"
         android:label="fragment_lista_viagens"
-        tools:layout="@layout/fragment_lista_viagens" />
+        tools:layout="@layout/fragment_lista_viagens" >
+        <action
+            android:id="@+id/action_listaViagensFragment_to_declaracaoFragment"
+            app:destination="@id/declaracaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/declaracaoFragment"
+        android:name="com.pos.despviagemapp.ui.declaracoes.DeclaracaoFragment"
+        android:label="fragment_declaracao"
+        tools:layout="@layout/fragment_declaracao" >
+        <action
+            android:id="@+id/action_declaracaoFragment_to_lancamentoFragment"
+            app:destination="@id/lancamentoFragment" />
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/lancamentoFragment"
+        android:name="com.pos.despviagemapp.ui.declaracoes.LancamentoFragment"
+        android:label="fragment_lancamento"
+        tools:layout="@layout/fragment_lancamento" >
+        <action
+            android:id="@+id/action_lancamentoFragment_to_apuracaoFragment"
+            app:destination="@id/apuracaoFragment" />
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/apuracaoFragment"
+        android:name="com.pos.despviagemapp.ui.declaracoes.ApuracaoFragment"
+        android:label="fragment_apuracao"
+        tools:layout="@layout/fragment_apuracao" >
+        <action
+            android:id="@+id/action_apuracaoFragment_to_listaViagensFragment"
+            app:destination="@id/listaViagensFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="TotalDespesas"
+            app:argType="string" />
+    </fragment>
 </navigation>
